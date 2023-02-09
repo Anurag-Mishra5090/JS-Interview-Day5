@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+    
+    <title>JS Day 5 Question</title>
+    <style>
+        pre{
+            background-color: white;
+            padding: 15px;
+            border: 3px solid grey;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+      
+        body{
+            background: radial-gradient(black,red,green);
+        }
+        p{
+            color: rgb(24, 198, 237);
+            font-size: 2em;
+        }
+        h1{
+            text-align: center;
+            color: aqua;
+            font-weight: bold;
+            font-size: 5em;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-header">JS Interview Day 5</h1>
+    <hr>
+<div class="container-fluid">
+   <p><b>What is hoisting?</b></p>
+   <pre>
+    It is a mechanism where function and variable are moved in the top of their scopes.
+    ex: this is our question
+    sum(5,6)
+    function sum(a,b){
+        console.log(a+b)
+    }
+    var c = 5;
+    console.log(c)
+
+    hoisting : the way of executing
+
+    var c= 5
+    function sum(a,b){
+        console.log(a+b)
+    }
+    sum(5,6)
+    console.log(c)
+   </pre>
+
+   <p><b>What is a Temporal Dead Zone?</b></p>
+   <pre>
+    It is the zone where we access the value before declaration.
+    ex:
+    console.log(a)  //Output : undefine
+    console.log(b)  //Output : Type Error: cannot access before initiialization
+    var a = 5;
+    let b= 6;
+   </pre>
+
+   <p><b>Explain passed by value and passed by reference</b></p>
+   <pre>
+    Passed by Value : It apply on the primtive data types. Copied variable assign different memory.
+    ex: var a=5
+    var b=a
+    b=b+5
+    console.log(b) Different memory and 5 Output
+    console.log(a) Different memory and 10 Different Output
+
+    Passed By Reference : It apply on the non-primitive data type. Copied datatype has same memory.
+    ex: let arr1 = [1,2,3,4]
+    let arr2=arr1 
+    arr2.push(5)
+    console.log(arr1)  //Output : 11,2,3,4,5] Same Memory Allocaton
+    console.log(arr2)  //Output : 11,2,3,4,5] Same Memory Allocaton
+
+   </pre>
+
+   <p><b>What is the DOM?</b></p>
+   <pre>
+    DOM stands for Document Object Model. 
+    Here document is a html code and the tags,elements are the object and the tree is known as model.
+    Our Javascript interaacts with HTML with the help of DOM.
+   </pre>
+
+   <p><b>Write code to explain map and filter in arrays</b></p>
+   <pre>
+   Map : It is the hgher order method of array. It creates a new array from calling a function for every array element.
+   ex: 
+   arr1= [1,2,3,4]
+   arr2 = arr1.map(i=>i+1)
+  console.log(arr2);
+
+  Filter : It is the hgher order method of array. The filter() method creates a new array filled with elements that pass a test provided by a function.
+  ex:
+  arr1= [1,2,3,4]
+  arr2 = arr1.filter(i=>i>3)
+ console.log(arr2);
+
+   </pre>
+
+   <p><b>What is the purpose of async/await keywords?</b></p>
+   <pre>
+    It is use for fetching the promse data.
+    async makes a function return a Promise
+    await makes a function wait for a Promise
+
+   </pre>
+
+   <p><b>Give an example of async/await</b></p>
+   <pre>
+    async function myFunction() {return "Hello";}
+
+myFunction().then(
+  function(value) {myDisplayer(value);}
+);
+   </pre>
+    
+</div>
+
+    <script>
+//     arr1= [1,2,3,4]
+//     arr2 = arr1.filter(i=>i>3)
+//    console.log(arr2);
+
+
+
+    </script>
+</body>
+</html>
